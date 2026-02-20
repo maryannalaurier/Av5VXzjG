@@ -509,38 +509,27 @@
 
 <script>
 (function () {
-  const TARGET_HOUR = 17;
-  const TARGET_MIN = 0;
-
-  let reloadedToday = false;
 
   function checkTime() {
     const now = new Date();
+    const hour = now.getHours();
+    const min  = now.getMinutes();
 
-    // 日付が変わったらフラグリセット
-    if (now.getHours() === 0 && now.getMinutes() === 0) {
-      reloadedToday = false;
-    }
-
-    // 17:00 ちょうどに1回だけリロード
-    if (
-      now.getHours() === TARGET_HOUR &&
-      now.getMinutes() === TARGET_MIN &&
-      !reloadedToday
-    ) {
-      reloadedToday = true;
+    // 17:03〜17:10の間だけ30秒ごとに更新
+    if (hour === 17 && min >= 3 && min <= 10) {
       location.reload();
     }
   }
 
-  // 30秒ごとにチェック（十分軽い）
-  setInterval(checkTime, 30000);
+  setInterval(checkTime, 30000); // 30秒ごと
+
 })();
 </script>
 
    
 </body>
 </html>
+
 
 
 
