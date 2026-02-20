@@ -30,18 +30,17 @@
  position: relative;  
 }
 
- /* リロードボタン */
-    .reload-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
+/* リロードボタン */
+ .reload-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 6px 14px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 6px;
   background: #ffffff;
   cursor: pointer;
-  z-index: 9999;
 }
 
 .reload-btn:hover {
@@ -51,8 +50,6 @@
 /* スマホ用リロードボタン */
 @media (max-width: 768px) {
   .reload-btn {
-    top: 8px;
-    right: 8px;
     font-size: 13px;
     padding: 5px 10px;
   }
@@ -543,6 +540,7 @@
    
 </body>
 </html>
+
 
 
 
