@@ -32,29 +32,26 @@
 
 /* リロードボタン */
 .reload-btn {
-  width: 54px;
-  height: 54px;
-  display: block;
-  transform: translateX(1px);
   position: absolute;
   top: 79px;
   right: 0;
-  background: #333;
-  color: #ffffff;
-  border: none;
+
+  width: 54px;
+  height: 54px;
+
   border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+  border: none;
+
+  background: #333;
+  color: #fff;
+
+  font-size: 28px;
+  line-height: 54px; 
+  text-align: center;
+
   cursor: pointer;
 }
-
-.reload-btn:hover {
-  background: #555;
-}
-
-.reload-btn svg {
-  display: block;
-}
+    
 /* スマホ用リロードボタン */
 @media (max-width: 768px) {
   .reload-btn {
@@ -407,12 +404,7 @@
 <p style="font-size:12px;color:#888;">This page is for personal use.</p>
 
   <h1>Skyデイリーチェック</h1>
-<button class="reload-btn" onclick="location.reload();">
-  <svg viewBox="0 0 24 24" width="27" height="27">
-    <path fill="currentColor"
-      d="M12 6V3L8 7l4 4V8c2.8 0 5 2.2 5 5a5 5 0 1 1-9.8-1H5.2A7 7 0 1 0 12 6z"/>
-  </svg>
-　</button>
+<button class="reload-btn" onclick="location.reload();">↻</button>
   <h2>デイリー</h2>
   <div class="iframe-crop page-1">
     <iframe src="https://9-bit.jp/skygold/6593#:~:text=%E3%82%8C%E3%81%9F%E5%9C%B0-,%E3%83%87%E3%82%A4%E3%83%AA%E3%83%BC%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E4%B8%80%E8%A6%A7,-%E5%A4%A7%E7%AB%B6%E6%8A%80%E4%BC%9A"></iframe>
@@ -541,6 +533,7 @@
    
 </body>
 </html>
+
 
 
 
