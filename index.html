@@ -29,6 +29,34 @@
   margin: 0 auto;        /* ← これが中央寄せ */
 }
 
+ /* リロードボタン */
+    .reload-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.reload-btn:hover {
+  background: #eee;
+}
+
+/* スマホ用リロードボタン */
+@media (max-width: 768px) {
+  .reload-btn {
+    top: 8px;
+    right: 8px;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+
     h1 {
       margin: 0px;
     }
@@ -371,7 +399,9 @@
 <p style="font-size:12px;color:#888;">This page is for personal use.</p>
 
   <h1>Skyデイリーチェック</h1>
-
+<button class="reload-btn" onclick="location.reload();">
+  🔄 更新
+</button>
   <h2>デイリー</h2>
   <div class="iframe-crop page-1">
     <iframe src="https://9-bit.jp/skygold/6593#:~:text=%E3%82%8C%E3%81%9F%E5%9C%B0-,%E3%83%87%E3%82%A4%E3%83%AA%E3%83%BC%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E4%B8%80%E8%A6%A7,-%E5%A4%A7%E7%AB%B6%E6%8A%80%E4%BC%9A"></iframe>
@@ -512,6 +542,7 @@
    
 </body>
 </html>
+
 
 
 
