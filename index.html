@@ -66,6 +66,12 @@
   }
 }
 
+    /* iframeスクロール禁止用 */
+.no-scroll iframe {
+  overflow: hidden;
+  pointer-events: none;   /* マウスホイールやドラッグを無効化 */
+}
+    
     h1 {
     margin: 0 0 15px 5px;
     }
@@ -414,12 +420,12 @@
   </div>
 
   <h2>シーズンキャンドル</h2>
-  <div class="iframe-crop page-2">
+  <div class="iframe-crop page-2 no-scroll">
     <iframe src="https://9-bit.jp/skygold/19750/#google_vignette"></iframe>
   </div>
 
   <h2>闇の破片</h2>
-  <div class="iframe-crop page-3">
+  <div class="iframe-crop page-3 no-scroll">
     <iframe src="https://9-bit.jp/skygold/23767/"></iframe>
   </div>
  
@@ -524,6 +530,7 @@
    
 </body>
 </html>
+
 
 
 
