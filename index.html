@@ -535,13 +535,13 @@
     const hour = now.getHours();
     const min  = now.getMinutes();
 
-    // 17:01〜17:10の間だけ30秒ごとに更新
+    // 17:01〜17:10の間だけ15秒ごとに更新
     if (hour === 17 && min >= 1 && min <= 10) {
       location.reload();
     }
   }
 
-  setInterval(checkTime, 30000); // 30秒ごと
+  setInterval(checkTime, 15000); // 15秒ごと
 
 })();
 </script>
@@ -549,6 +549,7 @@
    
 </body>
 </html>
+
 
 
 
