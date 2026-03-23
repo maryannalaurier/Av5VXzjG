@@ -531,14 +531,14 @@
 Tweets by thatskygameJP
 </a>
 
-<script src="https://platform.twitter.com/widgets.js"></script>
+<script async src="https://platform.twitter.com/widgets.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    if (window.twttr) {
-      window.twttr.widgets.load();
-    }
-  });
+window.onload = function () {
+  if (window.twttr && window.twttr.widgets) {
+    window.twttr.widgets.load();
+  }
+};
 </script>
 </div>
 
