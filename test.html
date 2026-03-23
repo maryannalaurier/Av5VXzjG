@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>X Timeline Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h1>Twitter Timeline Test</h1>
+
+<a class="twitter-timeline"
+   href="https://twitter.com/thatskygameJP">
+Tweets by thatskygameJP
+</a>
+
+<script async src="https://platform.twitter.com/widgets.js"></script>
+
+<script>
+window.onload = function () {
+  if (window.twttr && window.twttr.widgets) {
+    window.twttr.widgets.load();
+  }
+};
+</script>
+
+</body>
+</html>
