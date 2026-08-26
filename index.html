@@ -282,6 +282,27 @@
     margin:0px;
 }
 
+/* フローティング時計 */
+
+#clock {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 9999;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+
+  pointer-events: none;
+}
+
     /* ===== スマホ専用 ===== */
 @media (max-width: 768px) {
 
@@ -442,6 +463,14 @@
   }
 }
 
+/* フローティング時計 */
+  #clock {
+    right: 10px;
+    bottom: 10px;
+    font-size: 18px;
+    padding: 7px 10px;
+  }
+
   </style>
 </head>
 
@@ -451,6 +480,10 @@
 
   <h1>Skyデイリータスク<a href="https://9-bit.jp/skygold/6593" target="_blank" style="text-decoration: none;">➡</a></h1>
 <button class="reload-btn" onclick="location.reload();">↻</button>
+
+<!-- フローティング時計 -->
+<div id="clock">00:00:00</div>
+
   <div class="iframe-crop page-1">
     <iframe src="https://9-bit.jp/skygold/6593#:~:text=%E3%82%8C%E3%81%9F%E5%9C%B0-,%E3%83%87%E3%82%A4%E3%83%AA%E3%83%BC%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E4%B8%80%E8%A6%A7,-%E5%A4%A7%E7%AB%B6%E6%8A%80%E4%BC%9A"></iframe>
   </div>
@@ -570,6 +603,25 @@
 })();
 </script>
 
+<!-- フローティング時計 -->
+<script>
+(function () {
+
+  function checkTime() {
+    const now = new Date();
+    const hour = now.getHours();
+    const min  = now.getMinutes();
+
+    // 16:01〜16:10の間だけ15秒ごとに更新
+    if (hour === 16 && min >= 1 && min <= 10) {
+      location.reload();
+    }
+  }
+
+  setInterval(checkTime, 20000);
+
+})();
+</script>
    
 </body>
 </html>
