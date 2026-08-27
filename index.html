@@ -206,6 +206,33 @@
   pointer-events: none;
 }
 
+    /* フローティング最上部へ戻るボタン */
+#top-button {
+  position: fixed;
+  right: 15px;
+  bottom: 70px;
+  z-index: 9999;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+
+  font-size: 24px;
+  line-height: 44px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+#top-button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
     /* ===== スマホ専用 ===== */
 @media (max-width: 768px) {
 
@@ -244,32 +271,6 @@
     transform: translateY(-3776px);
     }
 
-    /* フローティング最上部へ戻るボタン */
-#top-button {
-  position: fixed;
-  right: 15px;
-  bottom: 70px;
-  z-index: 9999;
-
-  width: 44px;
-  height: 44px;
-
-  border: none;
-  border-radius: 50%;
-
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-
-  font-size: 24px;
-  line-height: 44px;
-  text-align: center;
-
-  cursor: pointer;
-}
-
-#top-button:hover {
-  background: rgba(0, 0, 0, 0.9);
-}
 
     /* スマホ用キャプチャ */
 @media (max-width: 768px) {
