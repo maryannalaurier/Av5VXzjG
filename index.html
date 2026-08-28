@@ -237,32 +237,6 @@
   pointer-events: none;
 }
 
-    /* フローティング最上部へ戻るボタン */
-#top-button {
-  position: fixed;
-  right: 15px;
-  bottom: 90px;
-  z-index: 9999;
-
-  width: 44px;
-  height: 44px;
-
-  border: none;
-  border-radius: 50%;
-
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-
-  font-size: 24px;
-  line-height: 44px;
-  text-align: center;
-
-  cursor: pointer;
-}
-
-#top-button:hover {
-  background: rgba(0, 0, 0, 0.9);
-}
     /* ===== スマホ専用 ===== */
 @media (max-width: 768px) {
 
@@ -374,20 +348,6 @@
     padding: 7px 10px;
   }
 
-      /* フローティング最上部へ戻るボタン */
-  #top-button {
-    left: 10px;
-    right: auto;
-    top:auto;
-    bottom: 10px;
-
-    width: 40px;
-    height: 40px;
-
-    font-size: 22px;
-    line-height: 40px;
-  }
-
 }
 
   </style>
@@ -416,9 +376,6 @@
 
 </div>
 
-
-<!-- 最上部へ戻るボタン -->
-<button id="top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
 
 <script>
 function updateClock() {
