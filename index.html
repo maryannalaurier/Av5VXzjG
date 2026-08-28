@@ -185,23 +185,54 @@
     margin:0px;
 }
 
-/* フローティング時計 */
-
-#clock {
+/* フローティングメニュー＋時計 */
+#floating-menu {
   position: fixed;
   right: 15px;
   bottom: 15px;
   z-index: 9999;
 
-  padding: 8px 12px;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 
   background: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* メニュー */
+#floating-menu a {
+  display: block;
+  padding: 8px 14px;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 15px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#floating-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 区切り線 */
+#floating-menu .divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 3px 8px;
+}
+
+/* 時計 */
+#clock {
+  padding: 8px 12px;
+
   color: #fff;
 
-  font-size: 50px;
+  font-size: 20px;
   font-family: monospace;
   font-weight: bold;
+  text-align: center;
 
   pointer-events: none;
 }
@@ -369,8 +400,23 @@
   <h1>Skyデイリータスク<a href="https://9-bit.jp/skygold/6593" target="_blank" style="text-decoration: none;">➡</a></h1>
 <button class="reload-btn" onclick="location.reload();">↻</button>
 
-<!-- フローティング時計 -->
-<div id="clock"></div>
+
+<!-- フローティングメニュー＋時計 -->
+<div id="floating-menu">
+
+  <a href="#daily">デイリー</a>
+  <a href="#season">シーキャン</a>
+  <a href="#bigcandle">大キャン</a>
+  <a href="#shard">闇の破片</a>
+  <a href="#calendar">カレンダー</a>
+
+  <div class="divider"></div>
+
+  <div id="clock"></div>
+
+</div>
+
+
 <!-- 最上部へ戻るボタン -->
 <button id="top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
 
